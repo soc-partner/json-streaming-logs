@@ -130,8 +130,8 @@ event zeek_init() &priority=-5
 
 	# Add the filters separately to avoid problems with modifying a set/table
 	# while it's being iterated over.
-	for ( [stream, filt] in new_filters )
+	for ( [stream, the_filter] in new_filters )
 		{
-		Log::add_filter(stream, filt);
+		Log::add_filter(stream, the_filter);
 		}
 	}
